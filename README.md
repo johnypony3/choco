@@ -1,5 +1,3 @@
-
-#
 # Chocolatey - like yum or apt-get, but for Windows
 You can just call me choco.
 
