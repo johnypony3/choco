@@ -6,7 +6,7 @@ mono:
   - latest
 install:
   - sudo apt-get update -y
-  - sudo apt-get install mono-complete# mono-mcs
+  - sudo apt-get install mono-complete mono-mcs
   - sudo bash install-python.sh
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
