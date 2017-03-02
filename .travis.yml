@@ -5,8 +5,8 @@ sudo:
 mono:
   - latest
 install:
-  - bash install-python.sh
   - sudo apt-get update -y
+  - sudo bash install-python.sh
   - sudo apt-get install mono-devel mono-gmcs
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
