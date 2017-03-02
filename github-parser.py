@@ -30,9 +30,9 @@ if(r.ok):
         print('https://packages.chocolatey.org/' + packageShortName)
         ret = requests.head('https://packages.chocolatey.org/' + packageShortName)
 
-        if ret.status_code == 200:
-            print '>> >> skipping package: already been uploaded to chocolatey '
-            # continue
+        # if ret.status_code == 200:
+        # print '>> >> skipping package: already been uploaded to chocolatey '
+        # continue
 
         if "beta" in packageShortName:
             print '>> >> skipping package: beta'
