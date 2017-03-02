@@ -17,7 +17,7 @@ script:
   - ./build.sh -v
   - sudo mkdir -p /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - sudo mkdir -p home/travis/build/johnypony3/choco/build_output/chocolatey/lib
-  - sudo "mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe -? --allow-unofficial"
+  - sudo mono "/home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe -? --allow-unofficial"
 
 #  - sudo choco -?
 #  - python ./github-parser.py
