@@ -5,7 +5,7 @@ sudo:
 mono:
   - 3.12.0
 install:
-#  - bash install-python.sh
+  - bash install-python.sh
   - sudo apt-get install mono-devel mono-gmcs
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
@@ -20,7 +20,7 @@ script:
   - sudo mono "/home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe -? --allow-unofficial"
 
 #  - sudo choco -?
-#  - python ./github-parser.py
+  - python ./github-parser.py
 #  - choco apiKey -k $CHOCO_KEY -source https://chocolatey.org/
 #  - find ./packages -name "*.nuspec" -type f #-exec cat {} \;
 #  - choco pack ./packages/3.36.0/paket.nuspec
