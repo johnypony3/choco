@@ -9,13 +9,12 @@ install:
   - sudo apt-get install mono-devel mono-gmcs
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
+  - pip install requests
 before_script:
   - chmod +x build.sh
 script:
   - ./build.sh -v
+  - sudo mkdir /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - python ./github-parser.py
   - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe apiKey -k $CHOCO_KEY -source https://chocolatey.org/
   - find /packages -name "*.nupkg" -type f -exec mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe pack {} \;
-
-#  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe
-#  - /System32/WindowsPowerShell/v1.0/powershell.exe ./generateAllPackages.ps1
