@@ -9,4 +9,4 @@ before_script:
   - chmod +x build.sh
 script:
   - ./build.sh -v
-  - app.powershell ./generateAllPackages.ps1
+  - /System32/WindowsPowerShell/v1.0/powershell.exe ./generateAllPackages.ps1
