@@ -12,10 +12,12 @@ install:
   - cd Python-2.7.13
   - sudo ./configure
   - sudo make altinstall
+  - python2.7 -V
+  - cd ~
   - nuget restore src/chocolatey.sln
 before_script:
   - chmod +x build.sh
 script:
   - ./build.sh -v
-  - choco
+  - mono choco
 #  - /System32/WindowsPowerShell/v1.0/powershell.exe ./generateAllPackages.ps1
