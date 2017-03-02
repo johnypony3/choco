@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe "$@" --allow-unofficial

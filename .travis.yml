@@ -6,9 +6,7 @@ mono:
   - 3.12.0
 install:
   - bash install-python.sh
-  - sudo pip install requests[security]
   - sudo apt-get install mono-devel mono-gmcs
-#  - sudo apt-get install libffi-dev libssl-dev
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
 before_script:
@@ -18,8 +16,7 @@ script:
   - sudo mkdir -p /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - sudo mkdir -p home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - python ./github-parser.py
-  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe -?
-  - find ./packages -name "paker.nuspec" -type f 
+  - choco -?
 #  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe apiKey -k $CHOCO_KEY -source https://chocolatey.org/
-#  - find ./packages -name "*.nupkg" -type f -exec cat {} \;
+  - find ./packages -name "*.nuspec" -type f -exec cat {} \;
 #  - find ./packages -name "*.nupkg" -type f -exec mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe pack {} \;

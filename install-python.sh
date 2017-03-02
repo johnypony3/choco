@@ -7,3 +7,4 @@ cd Python-2.7.13
 sudo ./configure
 sudo make altinstall
 python2.7 -V
+sudo pip install requests[security]
