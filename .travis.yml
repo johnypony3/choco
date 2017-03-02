@@ -3,7 +3,7 @@ language:
 sudo:
   - required
 mono:
-  - latest
+  - 3.12.0
 install:
   - sudo apt-get update -y
   - sudo apt-get install mono-complete mono-mcs
