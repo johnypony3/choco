@@ -18,6 +18,8 @@ script:
   - sudo mkdir -p /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - sudo mkdir -p home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - python ./github-parser.py
-  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe apiKey -k $CHOCO_KEY -source https://chocolatey.org/
-  - find ./packages -name "*.nupkg" -type f -exec cat {} \;
-  - find ./packages -name "*.nupkg" -type f -exec mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe pack {} \;
+  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe -?
+  - find ./packages -name "paker.nuspec" -type f 
+#  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe apiKey -k $CHOCO_KEY -source https://chocolatey.org/
+#  - find ./packages -name "*.nupkg" -type f -exec cat {} \;
+#  - find ./packages -name "*.nupkg" -type f -exec mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe pack {} \;
