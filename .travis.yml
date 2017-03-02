@@ -13,5 +13,5 @@ before_script:
   - chmod +x build.sh
 script:
   - ./build.sh -v
-  - mono $PKG_CONFIG_PATH/choco.exe
+  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe
 #  - /System32/WindowsPowerShell/v1.0/powershell.exe ./generateAllPackages.ps1
