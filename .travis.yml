@@ -13,6 +13,7 @@ before_script:
   - chmod +x build.sh
   - chmod +x choco
   - sudo cp choco /usr/local/bin/choco
+  - echo $CHOCO_KEY
 script:
   - ./build.sh -v
   - sudo mkdir -p /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
