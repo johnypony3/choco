@@ -18,6 +18,7 @@ script:
   - sudo mkdir -p /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - sudo mkdir -p home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe -? --allow-unofficial
+  
 #  - choco -?
 #  - python ./github-parser.py
 #  - choco apiKey -k $CHOCO_KEY -source https://chocolatey.org/
