@@ -5,7 +5,7 @@ sudo:
 mono:
   - 3.12.0
 install:
-  - bash install-python.sh
+#  - bash install-python.sh
   - sudo apt-get install mono-devel mono-gmcs
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
@@ -17,10 +17,11 @@ script:
   - ./build.sh -v
   - sudo mkdir -p /home/travis/build/johnypony3/choco/build_output/chocolatey/lib
   - sudo mkdir -p home/travis/build/johnypony3/choco/build_output/chocolatey/lib
-  - python ./github-parser.py
+  - choco -?
+#  - python ./github-parser.py
 #  - choco apiKey -k $CHOCO_KEY -source https://chocolatey.org/
-  - find ./packages -name "*.nuspec" -type f #-exec cat {} \;
+#  - find ./packages -name "*.nuspec" -type f #-exec cat {} \;
 #  - choco pack ./packages/3.36.0/paket.nuspec
-  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe pack ./packages/3.36.0/paket.nuspec
+#  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe pack ./packages/3.36.0/paket.nuspec
 #  - find ./packages -name "*.nuspec" -type f -exec choco pack {} \;
-  - find . -name "*.nupkg" -type f #-exec cat {} \;
+#  - find . -name "*.nupkg" -type f #-exec cat {} \;
