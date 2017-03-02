@@ -11,7 +11,12 @@ install:
   - nuget restore src/chocolatey.sln
 before_script:
   - chmod +x build.sh
+  - chmod +x choco
 script:
   - ./build.sh -v
-  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe
+  - WORKDIR /usr/local/bin
+  - RUN ln -s /home/travis/build/johnypony3/choco/build_output/chocolatey
+  - COPY choco /usr/local/bin/choco
+  - choco
+#  - mono /home/travis/build/johnypony3/choco/build_output/chocolatey/choco.exe
 #  - /System32/WindowsPowerShell/v1.0/powershell.exe ./generateAllPackages.ps1
