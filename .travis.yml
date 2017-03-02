@@ -15,7 +15,7 @@ install:
   - sudo ./configure
   - sudo make altinstall
   - python2.7 -V
-  - cd ~/choco
+  - cd ~/johnypony3/choco
   - nuget restore src/chocolatey.sln
 before_script:
   - chmod +x build.sh
