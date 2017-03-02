@@ -1,5 +1,7 @@
 language:
   - csharp
+sudo:
+  - required
 mono:
   - 3.12.0
 install:
