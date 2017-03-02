@@ -20,5 +20,6 @@ script:
   - python ./github-parser.py
   - choco apiKey -k $CHOCO_KEY -source https://chocolatey.org/
   - find ./packages -name "*.nuspec" -type f #-exec cat {} \;
-  - find ./packages -name "*.nuspec" -type f -exec choco pack {} \;
+  - choco pack ./packages/3.36.0/paket.nuspec
+#  - find ./packages -name "*.nuspec" -type f -exec choco pack {} \;
   - find . -name "*.nupkg" -type f #-exec cat {} \;
