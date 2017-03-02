@@ -6,10 +6,10 @@ mono:
   - 3.12.0
 install:
   - bash install-python.sh
-  - sudo apt-get install mono-devel mono-gmcs pip
+  - sudo pip install requests
+  - sudo apt-get install mono-devel mono-gmcs
   - cd /home/travis/build/johnypony3/choco
   - nuget restore src/chocolatey.sln
-  - pip install requests
 before_script:
   - chmod +x build.sh
 script:
